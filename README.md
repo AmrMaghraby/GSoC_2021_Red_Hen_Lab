@@ -1,8 +1,16 @@
-# GSoC_2021_Red_Hen_Lab
+# DeepSBD for ClipShots
+This repository contains our implementation of [deepSBD](https://arxiv.org/abs/1705.08214) for [ClipShots](https://github.com/Tangshitao/ClipShots). The code is modified from [here](https://github.com/kenshohara/3D-ResNets-PyTorch).
 
-This repo. will contain my project with Red Hen Lab during this summer 2021.
+## Introduction
+We implement deepSBD in this repository. There are 2 backbones that can be selected, including the original Alexnet-like and ResNet-18 introduced in our [paper](https://arxiv.org/pdf/1808.04234.pdf).
 
-# Project Description
+## Resources
+1. The trained model for Alexnet-like backbone. [BaiduYun](https://pan.baidu.com/s/16q3CNuUhLAGkm21PPOqUSg), [Google Drive](https://drive.google.com/open?id=145NCxLhgdrKPIYm-qgp1SRYU_GFmzxxX)
+2. The trained model for ResNet-18 backbone. [BaiduYun](https://pan.baidu.com/s/1Bx2uVVQOuEnTxdBBGV3uCQ), [Google Drive](https://drive.google.com/file/d/1CVqxAp17OOBmNq9_jgEdaoDbrmK5Bmog/view?usp=sharing)
+3. The pretrained [model](https://drive.google.com/open?id=10h_axdnkjupEDYe-OiUzm5ALX8w5DX_5) for ResNet-18 backbone.
 
-By using digital video, every day the number of people needs to edit and manipulate video content is to increase. This requires from us to have better understanding how videos are constructed. Videos are constructed by combining different shots of the camera placed after each other. A combination of different shot transition creates the final video at the end. The final video contain visual effects which could be classified into two main categories: sharp and gradual. The former is a sudden change of the shot over 1 frame, while gradual transitions occur over multiple frames. Gradual transitions are further classified into dissolve and non-dissolve. The former includes cases such as semi-transparent graduals, fade in and fade out. Non-dissolve are dominated by wipes. Wipe graduals have a much wider variety than the dissolve graduals.
+## Training
+Please refer to `train.sh`
 
+## Testing
+Add '--no_train' options to `train.sh`.
