@@ -74,6 +74,21 @@ singularity run -B <path/to/video> -B <path/to/model> filmedit.img --vidpath <pa
 - `<path/to/video>` denotes the absolute input video path
 - `<path/to/model>` denotes the absolute path to trained model. If empty, the tool will tun on pre trained model.
 
+# Dataset
+By the help of [Mark J. Williams](https://faculty-directory.dartmouth.edu/mark-j-williams) and [John P. Bell](https://itc.dartmouth.edu/people/john-p-bell) and there students from Dartmouth college and University of Chicago.
+Special Thanks to the following students for their efforts in annotating the datasets:
+- Kevin Chen (Dartmouth College)
+- Elijah Czysz (Dartmouth College)
+- Maria Graziano (Dartmouth College)
+- Noah Hensley (Dartmouth College)
+- Emily Hester (Dartmouth College)
+- Adithi Jayaraman (Dartmouth College)
+- Yangqiao Lu (University of Chicago)
+- Momina Naveed (Dartmouth College)
+- Frandy Rodriguez (Dartmouth College)
+- Ileana Sung (Dartmouth College)
+
+
 # Future Work
 
 1- Training
