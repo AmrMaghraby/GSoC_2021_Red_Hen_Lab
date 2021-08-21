@@ -14,22 +14,26 @@ It also outputs in anther CSV file cuts numbers with the corrosponding frame num
 You need Python 3.9 to run this tool
 
 ### Installation
-For installing this tool with pretrained model, follow the steps below :
+For installing this tool with our pipeline, follow the steps below :
 1. Clone this repository `git clone https://github.com/AmrMaghraby/GSoC_2021_Red_Hen_Lab`
 2. cd phase 2 
 3. Install `requirements.txt` file by `pip install requirements.txt`
 
 Now we are ready for testing our pipeline.
 
-#### Testing
+#### Testing on Case HPC
 Now we can test the pipeline by follwoing the steps below :
 
 1. Module load singularity
 2. singularity run GSOC.img video_dir
+   
    In case you want JSON output describing each scene then add --output-json like the following example 
+   
    For example: singularity run GSOC.img ‘/mnt/rds/redhen/gallina/home/aam193/GSOC2021_Detect_Video_Cuts/306-706.mp4’ --output-json
+   
    In case you want CSV output contains cut num and cut frame in single file and output in anther file scene num and start time and end time for each scene 
    then add --output-csv like the following example 
+   
    For example: singularity run GSOC.img ‘/mnt/rds/redhen/gallina/home/aam193/GSOC2021_Detect_Video_Cuts/306-706.mp4’ --output-csv
 
 ## Usage
