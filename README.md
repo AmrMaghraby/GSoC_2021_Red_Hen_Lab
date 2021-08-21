@@ -19,17 +19,10 @@ For installing this tool with pretrained model, follow the steps below :
 2. cd phase 2 
 3. Install `requirements.txt` file by `pip install requirements.txt`
 
-Now we are ready for training and testing.
-#### Training
-Now we can train the model by follwoing the steps below :
-
-1. Module load singularity
-2. singularity shell GSOC.img
-3. source activate pyscene_env
-4. python getOptimalThreshold.py ‘path/to/directory/contain/mp4/files’ ‘path/to/directory/contains/test/csv/files/to/calculate/accuracy’
+Now we are ready for testing our pipeline.
 
 #### Testing
-Now we can test the model by follwoing the steps below :
+Now we can test the pipeline by follwoing the steps below :
 
 1. Module load singularity
 2. singularity run GSOC.img video_dir
@@ -77,3 +70,14 @@ singularity run -B <path/to/video> -B <path/to/model> filmedit.img --vidpath <pa
 - `<path/to/video>` denotes the absolute input video path
 - `<path/to/model>` denotes the absolute path to trained model. If empty, the tool will tun on pre trained model.
 
+# Future Work
+
+1- Training
+Now we can train the model to get the best thrshold required by pyScene, but unfourtanley we didnot have time to test everything so as future work we need to investigate more in it. In order to run the training pipeline follow the follwoing the steps below :
+
+1. Module load singularity
+2. singularity shell GSOC.img
+3. source activate pyscene_env
+4. python getOptimalThreshold.py ‘path/to/directory/contain/mp4/files’ ‘path/to/directory/contains/test/csv/files/to/calculate/accuracy’
+
+2- Classify soft cuts and hard cuts in an efficient way baased on the output of pyScene.
