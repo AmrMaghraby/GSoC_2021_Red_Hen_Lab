@@ -5,7 +5,7 @@
 ## About
 This is a CLI tool to detect cuts in color video films, especially old films with noise frames.
 It works by taking input video and pass the frames to pyScene tool to analyze it and extract the scenes start time and end time in CSV and JSON file describing details of each scene.
-It also outputs in anther CSV file cuts numbers with the corrosponding frame number. This tool was produced for [Google Summer Code 2021](https://amrmaghraby.github.io/MyJourneyGS0C2021/) with RedHenLabs and Media Ecology Project. 
+It also outputs in anther CSV file cuts numbers with the corrosponding frame number. This tool was produced for [Google Summer Code 2021](https://amrmaghraby.github.io/MyJourneyGS0C2021/) with RedHenLabs and Media Ecology Project. Mentors for this project are: [Mark J. Williams](https://faculty-directory.dartmouth.edu/mark-j-williams), [John P. Bell](https://itc.dartmouth.edu/people/john-p-bell), [vera tobin](https://cognitivescience.case.edu/faculty/vera-tobin/) and [Ahmed Ismail](https://ai-zahran.github.io/)
 
 ## Getting Started
 
@@ -22,6 +22,8 @@ For installing this tool with our pipeline, follow the steps below :
 Now we are ready for testing our pipeline.
 
 #### Testing on Case HPC
+By the help of [Ahmed Ismail](https://ai-zahran.github.io/) I have uplaoded the image successfully on HPC and resolve dependency issues.
+
 Now we can test the pipeline by follwoing the steps below :
 
 1. Module load singularity
@@ -75,6 +77,7 @@ singularity run -B <path/to/video> -B <path/to/model> filmedit.img --vidpath <pa
 - `<path/to/model>` denotes the absolute path to trained model. If empty, the tool will tun on pre trained model.
 
 # Dataset
+
 By the help of [Mark J. Williams](https://faculty-directory.dartmouth.edu/mark-j-williams) and [John P. Bell](https://itc.dartmouth.edu/people/john-p-bell) and there students from Dartmouth college and University of Chicago.
 Special Thanks to the following students for their efforts in annotating the datasets:
 - Kevin Chen (Dartmouth College)
@@ -88,6 +91,9 @@ Special Thanks to the following students for their efforts in annotating the dat
 - Frandy Rodriguez (Dartmouth College)
 - Ileana Sung (Dartmouth College)
 
+The following screenshot contains sample of the dataset provided by our mentors and their students which contains three different types of annotations soft cuts, hard cuts and multiframe cuts(hard cuts that will be transformed to mutltiframe cuts due to codec problem).
+![screenshot of dataset](https://raw.githubusercontent.com/AmrMaghraby/GSoC_2021_Red_Hen_Lab/main/Contributors/Screenshot%20from%202021-08-21%2017-00-56.png)
+
 
 # Future Work
 
@@ -98,5 +104,7 @@ Now we can train the model to get the best thrshold required by pyScene, but unf
 2. singularity shell GSOC.img
 3. source activate pyscene_env
 4. python getOptimalThreshold.py ‘path/to/directory/contain/mp4/files’ ‘path/to/directory/contains/test/csv/files/to/calculate/accuracy’
+
+Again thanks to [Ahmed Ismail](https://ai-zahran.github.io/) for suggesting Bayesain optimizer method which helped in finding the optimal threshold to be used in pyScene
 
 2- Classify soft cuts and hard cuts in an efficient way baased on the output of pyScene.
