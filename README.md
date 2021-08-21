@@ -5,7 +5,7 @@
 ## About
 This is a CLI tool to detect cuts in color video films, especially old films with noise frames.
 It works by taking input video and pass the frames to pyScene tool to analyze it and extract the scenes start time and end time in CSV and JSON file describing details of each scene.
-It also outputs in anther CSV file cuts numbers with the corrosponding frame number. This tool was produced for [Google Summer Code 2021](https://amrmaghraby.github.io/MyJourneyGS0C2021/) with RedHenLabs and Media Ecology Project. Mentors for this project are: [Mark J. Williams](https://faculty-directory.dartmouth.edu/mark-j-williams), [John P. Bell](https://itc.dartmouth.edu/people/john-p-bell), [vera tobin](https://cognitivescience.case.edu/faculty/vera-tobin/) and [Ahmed Ismail](https://ai-zahran.github.io/)
+It also outputs in anther CSV file cuts numbers with the corrosponding frame number. This tool was produced for [Google Summer Code 2021](https://amrmaghraby.github.io/MyJourneyGS0C2021/) with RedHenLabs and Media Ecology Project. Mentors for this project are: [Mark J. Williams](https://faculty-directory.dartmouth.edu/mark-j-williams), [John P. Bell](https://itc.dartmouth.edu/people/john-p-bell), [Vera Tobin](https://cognitivescience.case.edu/faculty/vera-tobin/) and [Ahmed Ismail](https://ai-zahran.github.io/)
 
 ## Getting Started
 
